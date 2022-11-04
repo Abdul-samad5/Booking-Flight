@@ -1,0 +1,34 @@
+@url= "http://localhost:3000/"
+//GET {{url}}/user HTTP/1.1
+
+GET http://localhost:3000/Getflights
+
+
+###
+POST http://localhost:3000/CreateFlight HTTP/1.1
+Content-Type: application/json
+
+{
+"title": "flight to Nigeria",
+"time": "2pm",
+"price": "10000",
+"date": "26-06-2022"
+}
+//single flight
+###
+GET http://localhost:3000/Getflight/a78fd00f-105d-442d-89cd-28b64fd04b1f
+
+
+###
+DELETE http://localhost:3000/Deleteflight/a78fd00f-105d-442d-89cd-28b64fd04b1f
+
+###
+PATCH   http://localhost:3000/Updateflight/a78fd00f-105d-442d-89cd-28b64fd04b1f
+Content-Type: application/json
+
+{
+"title": "flight to togo",
+"time": "2pm",
+"price": "10000",
+"date": "30-4-2000"
+}
